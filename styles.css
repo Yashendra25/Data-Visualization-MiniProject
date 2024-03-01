@@ -1,0 +1,45 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Input Styles */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Chart Options Styles */
+#chartOptions {
+    margin-bottom: 20px;
+}
+
+#chartOptions div {
+    margin-bottom: 10px;
+}
+
+/* Chart Container Styles */
+#chartContainer {
+    margin-bottom: 20px;
+}
+

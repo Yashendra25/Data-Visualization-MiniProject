@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <label for="fileInput">Upload File:</label>
+    <input type="file" id="fileInput" accept=".csv, .json">
+    <button onclick="processData()">Process Data</button>
+
+    <div id="chartType">
+        <label for="chartType">Select Chart Type:</label>
+        <label for="chartSelect">Select Chart Type:</label>
+        <select id="chartSelect">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="pie">Pie Chart</option>
+            <option value="radar">Radar Chart</option>
+            <option value="doughnut">Doughnut Chart</option>
+            <!-- Add more chart types as needed -->
+        </select>
+    </div>
+    <!-- New column selection dropdown -->
+    <div id="columnSelectDiv">
+        <label for="columnSelect">Select Column:</label>
+        <select id="columnSelect"></select>
+    </div>
+    <div id="chartOptions">
+        <!-- Dynamically populate options based on selected chart type -->
+        <div id="barOptions" style="display: none;">
+            <label for="barColor">Bar Color:</label>
+            <input type="color" id="barColor" value="#ff6384"><br>
+            <!-- Add more options as needed for bar chart customization -->
+        </div>
+        <div id="lineOptions" style="display: none;">
+            <label for="lineColor">Line Color:</label>
+            <input type="color" id="lineColor" value="#36a2eb"><br>
+            <!-- Add more options as needed for line chart customization -->
+        </div>
+        <div id="pieOptions" style="display: none;">
+            <label for="pieColors">Pie Colors:</label>
+            <input type="color" id="pieColor1" value="#ff6384">
+            <input type="color" id="pieColor2" value="#36a2eb">
+            <input type="color" id="pieColor3" value="#ffce56">
+            <!-- Add more options as needed for pie chart customization -->
+        </div>
+        <div id="radarOptions" style="display: none;">
+            <label for="radarColor">Radar Color:</label>
+            <input type="color" id="radarColor" value="#ff6384"><br>
+            <!-- Add more options as needed for radar chart customization -->
+        </div>
+        <div id="doughnutOptions" style="display: none;">
+            <label for="doughnutColor">Doughnut Color:</label>
+            <input type="color" id="doughnutColor" value="#ff6384"><br>
+            <!-- Add more options as needed for doughnut chart customization -->
+        </div>
+    </div>
+    <button onclick="generateChart()">Generate Chart</button>
+    <canvas id="chartContainer"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
